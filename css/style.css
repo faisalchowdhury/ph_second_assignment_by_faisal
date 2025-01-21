@@ -57,11 +57,12 @@ section {
 /* Header Style */
 
 .header {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
     
 }
 .brand  {
@@ -107,13 +108,16 @@ section {
 /* Main Area */
 
 .main {
-    max-width: 1000px;
+    
     margin: 0 auto;
     
 }
 
 /* Hero section */
-
+.hero_area {
+    max-width: 1100px;
+    margin: 0 auto;
+}
 .hero {
     display: flex;
     align-items: center;
@@ -144,11 +148,18 @@ section {
 } 
 
 /* Curriculum */
-.curriculum {
+.curriculum_area {
     background: url("../assets/bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+   
+
+}
+.curriculum {
+    max-width: 1100px;
+    margin:0 auto;
+
 }
 
 .curriculum_wrapper {
@@ -185,6 +196,24 @@ section {
     box-shadow: 0px 4px 50px 0 #ddd;
 }
 
+.curriculum_wrapper .curriculum_item a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.curriculum_wrapper .curriculum_item:nth-child(1) a{
+    color: var(--second);
+}
+
+.curriculum_wrapper .curriculum_item:nth-child(2) a{
+    color: var(--primary-color);
+}.curriculum_wrapper .curriculum_item:nth-child(3) a{
+    color: var(--fourth);
+}
+.curriculum_wrapper .curriculum_item a:hover {
+   
+    color: #202020;
+}
 .arrow {
     margin-top: 50px;
 }
@@ -200,13 +229,103 @@ section {
     color: #fff;
 }
 
+/* Our Stories Section */
+.story_section {
+    background: url("../assets/bg.png"),linear-gradient(0deg , rgba(254, 161, 1, 0.254) ,#F7F7F7);
+    background-position: top;
+}
+.story_area {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.story_area img {
+   width: 100%;
+}
+
+.story_area .story {
+    box-shadow: 0 4px 50px 0 #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+.story_1 {
+    grid-area: story_1;
+}
+.story_2 {
+    grid-area: story_2;
+}
+.story_3 {
+    grid-area: story_3;
+}
+.story_4 {
+    grid-area: story_4;
+}
+.story_5 {
+    grid-area: story_5;
+}
+.story_wrapper {
+    display: grid;
+    grid-template-areas: 
+    "story_1 story_1 story_2 story_3"
+    "story_1 story_1 story_4 story_5";
+    gap: 30px;
+}
+.story_wrapper .story:nth-child(1) h4 {
+    font-size: 2rem;
+}
+.story_wrapper .story:nth-child(1) p {
+    line-height: 1.5rem;
+}
+.story_wrapper .story button {
+    color: #fff;
+} 
+.story_wrapper .story:nth-child(1) button {
+    background: var(--fourth) ;
+}
+.story_wrapper .story:nth-child(2) button {
+    background: var(--primary-color) ;
+}
+.story_wrapper .story:nth-child(3) button {
+    background: var(--third) ;
+}
+.story_wrapper .story:nth-child(4) button {
+    background: var(--primary-color) ;
+}
+.story_wrapper .story:nth-child(5) button {
+    background: var(--second) ;
+}
+.story_wrapper .story_content {
+    padding: 20px; margin-top: -40px;
+}
+.story_wrapper .story_content button ,h4 ,p {
+    margin-bottom: 20px;
+}
+.story_content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+   
+}
+.story_area h2 {
+    text-align: center;
+}
+.story_area img {
+    object-fit: cover ;
+   
+}
+.lode_more {
+    text-align: center;
+    padding: 50px 0;
+}
 /* media screen for 576px  */
 @media screen and (max-width:576px){
+    
     /* Header  */
     .header {
         padding: 15px 20px;
         border-bottom: 1px solid #ddd;
-        margin-bottom: 20px;
+
+    
     }
     .brand h2 {
         display: none;
@@ -257,13 +376,11 @@ section {
 
     /* Main area */
     
-    .main {
-        padding: 0 20px;
-    }
-    
     /* Hero Section */
+    
     .hero {
         flex-direction: column-reverse;
+        padding: 0 20px;
     }
     .hero_content {
         text-align: center;
@@ -277,13 +394,38 @@ section {
 
 
     /* Curriculum section */
-
+    .curriculum_area {
+        padding: 0 20px;
+    }
     .curriculum_wrapper {
         grid-template-columns:repeat(1,1fr);
     }
     .arrow {
         display:none;
     }
+    
+    /* Story Section */
 
+    .story_area {
+    padding: 0px 20px;
+    }
+     .story:nth-child(1) {
+        display: none;
+    }
+    .story_wrapper {
+        gap: 10px;
+        grid-template-areas:
+        "story_1 story_1"
+        "story_2 story_3"
+        "story_4 story_5"
+        ;
+    }
+    .story_wrapper .story_content {
+        padding: 10px;
+        margin-top: -30px;
+    }
+    .story_content button {
+        font-size: 10px;
+    }
 
 }
