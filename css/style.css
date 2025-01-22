@@ -147,6 +147,16 @@ section {
     width: 100%;
 } 
 
+/* Marquee */
+
+.marquee {
+    margin-top: 50px;
+    background: var(--fourth);
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 20px;
+}
 /* Curriculum */
 .curriculum_area {
     background: url("../assets/bg.png");
@@ -427,7 +437,12 @@ section {
 
     }
 
-
+    /* Marquee */
+     
+    .marquee {
+        font-size: 2rem;
+        padding: 10px;
+    }
     /* Curriculum section */
     .curriculum_area {
         padding: 0 20px;
