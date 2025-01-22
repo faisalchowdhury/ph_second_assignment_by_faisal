@@ -258,6 +258,9 @@ section {
     overflow: hidden;
     background: #fff;
 }
+.story_area .story:hover {
+    box-shadow: 0 4px 50px 0 #c2c2c2;
+}
 .story_1 {
     grid-area: story_1;
 }
@@ -361,6 +364,9 @@ section {
 .footer_wrapper p {
     margin-top: 30px;
     line-height: 1.5rem;
+}
+.foot_item:nth-child(3) img:hover {
+    filter: grayscale(100%);
 }
 /* media screen for 576px  */
 @media screen and (max-width:576px){
@@ -477,7 +483,7 @@ section {
     .story_content button {
         font-size: 10px;
     }
-
+    
     /* Footer  */
 
     .footer {
